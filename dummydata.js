@@ -4,7 +4,7 @@ module.exports = [
         title:"MyFirstPost",
         startDate:"2021-12-20",
         endDate: "2021-12-31",
-        stringDate: "20 Dec - 31 Desc",
+        stringDate: "20 Dec 2021- 31 Dec 2021",
         duration:"Dibawah sebulan",
         description:" Pellentesque gravida consequat nunc, sed feugiat velit congue ac.  ",
         tech:[ 
@@ -21,7 +21,7 @@ module.exports = [
         title:"hey",
         startDate:"2021-12-20",
         endDate: "2021-12-31",
-        stringDate: "20 Dec - 31 Desc",
+        stringDate: "20 Dec 2021 - 31 Dec 2021",
         duration:"Dibawah sebulan",
         description:"Quisque turpis nibh. Pellentesque gravida consequat nunc, sed feugiat velit congue ac. ",
         tech:[ 

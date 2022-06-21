@@ -29,4 +29,8 @@ module.exports.getDateStringFormat = (date) => {
     const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
     return `${date[8] == 0 ? date[9] : date[8]+date[9]} ${date[5] == 0 ? months[date[6] - 1] : months[date.slice(5,7) - 1] } ${date.slice(0,4)}` 
+    // 2022/08/08
+
+    // 8 Aug 2022 
 }
+

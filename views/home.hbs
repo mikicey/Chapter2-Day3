@@ -55,8 +55,8 @@
     <!-- Intro  -->
     <section class="intro-section">
           <div class="container intro">
-                 <!-- Main -->
-                 <div class="intro-main">
+                  <!-- Main -->
+                  <div class="intro-main">
 
                   <h2 class="intro__title">Hi! Welcome to My Hut!</h2>
 
@@ -74,45 +74,44 @@
                       possimus distinctio reiciendis officiis consequatur  optio ut repellendus!</p>
 
 
-    <div class="btn-group">
-            <a  href="/contact" class="contact-btn">
-            Contact 
-            </a>
+                  <div class="btn-group">
+                          <a  href="/contact" class="contact-btn">
+                          Contact 
+                          </a>
 
-           <div class="download-btn">
-            download CV <img src="images/downloads.png">
-           </div>
-    </div>
+                          <div class="download-btn">
+                          download CV <img src="images/downloads.png">
+                          </div>
+                  </div>
 
-    <!-- Social -->
-    <div class="intro__socials">
+                   <!-- Social -->
+                  <div class="intro__socials">
 
-     <a href="https://www.linkedin.com/in/darren-christian-t-8b59b9224">
-        <i  class="fa-brands fa-linkedin-in"></i>
-     </a>
-     <a href="https://instagram.com/selftaught_tj?igshid=YmMyMTA2M2Y=">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-     <a href="https://www.facebook.com/profile.php?id=100080178886723">
-        <i class="fa-brands fa-facebook-f"></i>
-     </a>
-     <a href="https://www.twitter.com/DarrenC43892953">
-        <i class="fa-brands fa-twitter"></i>
-     </a>
+                      <a href="https://www.linkedin.com/in/darren-christian-t-8b59b9224">
+                            <i  class="fa-brands fa-linkedin-in"></i>
+                      </a>
+                      <a href="https://instagram.com/selftaught_tj?igshid=YmMyMTA2M2Y=">
+                            <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="https://www.facebook.com/profile.php?id=100080178886723">
+                            <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                      <a href="https://www.twitter.com/DarrenC43892953">
+                            <i class="fa-brands fa-twitter"></i>
+                      </a>
         
-      
-    </div>
+                  </div>
 
 
 
-                 </div>
+          </div>
 
          <!-- Card -->
-                 <div class="intro-card">
-  <img src="images/pexels-pixabay-220453.jpg" alt="My face">
-  <strong>Darren Christian</strong>
-  <p>Fullstack Developer</p>
-                 </div>
+          <div class="intro-card">
+                     <img src="images/pexels-pixabay-220453.jpg" alt="My face">
+                     <strong>Darren Christian</strong>
+                     <p>Fullstack Developer</p>
+          </div>
 
           </div>
     </section>
@@ -122,31 +121,32 @@
              <h2>MY PROJECT</h2>
 
              <div class="projects">
-                {{#each data}}
-                <div class="card" onclick="movePost({{this.id}})">
-                      
-    <div class="upper-project" >
-        <img class="project-img" src={{this.img}} width="100%" alt="">
-        <span class="project-title">{{this.title}}</span>
-        <p class="project-duration">duration: {{this.duration}}</p>
-        <p class="project-des">{{this.description}}</p>
-    </div>
 
-    <div class="lower-project" >
-        <div class="project-logos" >
-             {{#if this.tech.[0].node}} <i class="fa-brands fa-node-js"></i> {{/if}}
-              {{#if this.tech.[1].react}}<i class="fa-brands fa-react"></i> {{/if}}
-             {{#if this.tech.[2].js}}<i class="fa-brands fa-js"></i>{{/if}}
-             {{#if this.tech.[3].css}}<i class="fa-brands fa-css3-alt"></i>{{/if}}
-        </div>
+                  {{#each data}}
+                  <div class="card" onclick="movePost({{this.id}})">
+                      
+                      <div class="upper-project" >
+                         <img class="project-img" src={{this.img}} width="100%" alt="">
+                         <span class="project-title">{{this.title}}</span>
+                         <p class="project-duration">duration: {{this.duration}}</p>
+                         <p class="project-des">{{this.description}}</p>
+                      </div>
+
+                      <div class="lower-project" >
+                         <div class="project-logos" >
+                               {{#if this.tech.[0].node}} <i class="fa-brands fa-node-js"></i> {{/if}}
+                               {{#if this.tech.[1].react}}<i class="fa-brands fa-react"></i> {{/if}}
+                               {{#if this.tech.[2].js}}<i class="fa-brands fa-js"></i>{{/if}}
+                               {{#if this.tech.[3].css}}<i class="fa-brands fa-css3-alt"></i>{{/if}}
+                        </div>
      
-        <div class="project-buttons" >
-             <a href="/editproject/{{this.id}}"><button class="edit-btn">Edit</button></a>
-             <a href="/deletemyproject/{{this.id}}"><button class="delete-btn">Delete</button></a>
-        </div>
-    </div>
+                         <div class="project-buttons" >
+                               <a href="/editproject/{{this.id}}"><button class="edit-btn">Edit</button></a>
+                               <a href="/deletemyproject/{{this.id}}"><button class="delete-btn">Delete</button></a>
+                         </div>
+                      </div>
                      
-             </div>
+                  </div>
                 {{/each}}
             </div>
 
@@ -164,7 +164,8 @@
 
            // Functions
            function movePost(id){
-           window.location.href = `http://localhost:3000/single/${id}`;
+           window.location.href = `http://localhost:80/single/${id}`;
+            //window.location.href = "https://personal-project-1.herokuapp.com/single/${id}"
             }; 
 
 

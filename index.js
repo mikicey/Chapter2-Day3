@@ -22,7 +22,7 @@ let data = require("./dummydata");
 // GET
 app.get("/",(req,res)=>{
     const isPostNotThere = data.length == 0 ? true : false;
-    res.render("home", {data,isPostNotThere})
+   res.render("home", {data,isPostNotThere})
 }); 
 
 app.get("/single/:id",(req,res)=>{
@@ -59,7 +59,7 @@ app.post("/postmyproject",(req,res)=>{
                     description:req.body.description, tech:tech, img:imageUrl};
 
     data.push(newData);
-    console.log(data)
+    
 
     res.redirect("/");
 });
@@ -70,7 +70,7 @@ app.get("/deletemyproject/:id",(req,res)=>{
     
     const id = Number(req.params.id);
     data = data.filter(item => item.id !== id);
-    console.log(data)
+    
 
     res.redirect("/");
 })
@@ -80,7 +80,7 @@ app.get("/deletemyproject/:id",(req,res)=>{
 app.get("/editproject/:id", (req,res)=>{
        const id = req.params.id;
        const dataToEdit = data.find(item => item.id == id);
-  
+    
        res.render("editproject", {dataToEdit})
 });
     //  submit form from edit page
@@ -111,8 +111,6 @@ app.post("/editmyproject/:id",(req,res)=>{
     }else{
         return item
     }});
-
-    console.log(data)
 
     res.redirect("/")
 

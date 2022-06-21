@@ -23,6 +23,7 @@ section{
 }
 
 .intro-main{
+   
     flex: 2;
     margin-right: 48px;
 }
@@ -121,6 +122,7 @@ section{
 
 /*  CARD  */
 .intro-card{
+    flex-wrap: wrap;
     overflow: hidden;
     box-shadow: 0px 0px 64px rgb(215, 215, 215);
 
@@ -249,9 +251,14 @@ section{
  display: flex;
 }
 
+.project-buttons a{
+    flex: 1;
+    
+}
+
 .project-buttons button{
    position: relative;
-   flex: 1;
+   width: 100%;
    background-color: #111727 ;
    font-weight: bold;
    color: white;
@@ -263,7 +270,7 @@ section{
    cursor: pointer;
 }
 
-.project-buttons button:first-child{
+.project-buttons a:first-child{
     margin-right: 4px;
  }
 
